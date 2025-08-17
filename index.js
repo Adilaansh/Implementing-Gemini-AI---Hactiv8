@@ -7,7 +7,7 @@ const app = express()
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY})
 
-const GEMINI_MODEL = "gemini-2.0-flash"
+const GEMINI_MODEL = "gemini-2.5-flash"
 
 app.use(cors())
 app.use(express.json())
@@ -49,4 +49,5 @@ app.post('/api/chat', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`)
+
 })
